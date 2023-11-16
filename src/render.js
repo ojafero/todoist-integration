@@ -90,6 +90,10 @@ formElement.addEventListener("submit", async (event) => {
 copyButton.addEventListener("click", copyToClipboard);
 doneButton.addEventListener("click", () => {
   formElement.reset();
+  const taskTitleElement = document.querySelector(
+    `${taskAddedPageId} .task-title`
+  );
+  taskTitleElement.removeChild(taskTitleElement.lastChild);
   appElement.dataset.state = "add-task-screen";
   ipcRenderer.send("resize", { width: 410, height: 500 });
 });
