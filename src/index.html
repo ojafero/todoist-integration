@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todoist Integration</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="render.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="menu">
+        <img class="menu--icon" src="../images/todoist-icon.svg" alt="" />
+        <div class="menu--title">Add task in Todoist</div>
+        <div class="menu--close">&#x2715;</div>
+      </div>
+      <div id="app" data-state="add-task-screen">
+        <div id="add-task-screen">
+          <div class="heading">
+            <div class="heading--title">Add a task</div>
+            <div class="heading--description">All fields are required.</div>
+          </div>
+          <form class="task-form">
+            <label class="form--label" for="task-name">Task name</label>
+            <input type="text" id="task-name" name="task-name" required />
+            <label class="form--label label-description" for="task-description"
+              >Description</label
+            >
+            <textarea
+              type="text"
+              id="task-description"
+              name="task-description"
+              required
+            ></textarea>
+            <label class="form--label" for="project">Project</label>
+            <select id="project" name="project" required></select>
+            <label class="form--label" for="due-date">Due date</label>
+            <input type="text" id="due-date" name="due-date" required />
+            <button class="task-form--button">Add task</button>
+          </form>
+        </div>
+        <div id="task-added-screen">
+          <div class="task-title">
+            <span>Created</span>
+          </div>
+          <button class="done-button">Done</button>
+          <button class="copy-button">Copy link</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
