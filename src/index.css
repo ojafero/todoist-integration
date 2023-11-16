@@ -27,6 +27,7 @@ textarea {
   display: flex;
   align-items: center;
   padding-top: 0.4em;
+  -webkit-app-region: drag;
 }
 
 .menu--icon {
@@ -40,7 +41,7 @@ textarea {
 
 .menu--close {
   cursor: pointer;
-  /* padding: 12px 16px; */
+  -webkit-app-region: no-drag;
 }
 
 #app[data-state="task-added-screen"] #add-task-screen {
